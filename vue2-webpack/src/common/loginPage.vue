@@ -60,20 +60,24 @@ export default {
 
 <style lang="less" scoped>
 .login {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
   display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
 
   .bg-img {
+    position: absolute;
     height: 100%;
-    width: 100%;
+    z-index: 1;
   }
 
   .login-form {
     position: absolute;
-    top: 25%;
-    left: 35%;
+    z-index: 2;
     width: 400px;
     height: 250px;
     border: 1px solid #ffffff;
