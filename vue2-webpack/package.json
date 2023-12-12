@@ -37,7 +37,8 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.23.2",
-    "core-js": "^3.33.3"
+    "core-js": "^3.33.3",
+    "element-ui": "^2.15.14"
   },
   "browserslist": [
     "> 1%",
