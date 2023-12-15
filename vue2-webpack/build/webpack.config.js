@@ -38,14 +38,18 @@ module.exports = {
     new Dotenv({
       path: path.resolve(__dirname, `../.env.${process.env.NODE_ENV}`),
     }),
+
     new HtmlWebpackPlugin({
-      title: "vue2webpack5",
+      title: "Vue2Webpack5",
       template: "./index.html",
+      favicon: "./favicon.ico",
     }),
+
     new ProgressBarWebpackPlugin({
       complete: "█",
       clear: true,
     }),
+
     new MiniCssExtractPlugin({
       filename:
         process.env.NODE_ENV === "prod"
@@ -56,8 +60,11 @@ module.exports = {
           ? "css/[name].[contenthash].css"
           : "css/[name].css",
     }),
+
     new CssMinimizerPlugin(),
+
     new CleanWebpackPlugin(),
+
     new VueLoaderPlugin(),
   ],
 
